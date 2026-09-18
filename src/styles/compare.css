@@ -1,0 +1,41 @@
+/* 비교 페이지(프리뷰 전용) */
+.compare-index { max-width: 1200px; margin: 0 auto; padding: 48px var(--gutter) 96px; display: grid; gap: 48px; }
+.compare-index-head { display: grid; gap: 14px; max-width: 76ch; }
+.compare-index-head h1 { font-size: clamp(32px, 5vw, 56px); font-weight: 800; letter-spacing: -0.03em; line-height: 1.05; }
+.compare-index-head .lead { font-size: 17px; color: var(--muted); }
+.compare-index-ctas { margin-top: 8px; }
+.compare-cards { display: grid; gap: 20px; }
+@media (min-width: 900px) { .compare-cards { grid-template-columns: repeat(3, 1fr); } }
+.compare-card { display: grid; gap: 12px; padding: 24px; background: var(--surface); border-radius: 16px; border: 1px solid var(--line); align-content: start; }
+.compare-card h2 { font-size: 22px; letter-spacing: -0.02em; }
+.compare-card > p { color: var(--muted); }
+.compare-card ul { display: grid; gap: 4px; font-size: 14px; }
+.compare-card ul a { color: var(--interactive-blue); }
+.compare-card-a { border-top: 6px solid #202124; }
+.compare-card-b { border-top: 6px solid #8A8883; }
+.compare-card-c { border-top: 6px solid var(--brand-blue); }
+.compare-table-wrap h2, .compare-questions h2 { font-size: 22px; margin-bottom: 16px; letter-spacing: -0.02em; }
+.compare-table { width: 100%; border-collapse: collapse; font-size: 14px; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
+.compare-table th, .compare-table td { padding: 12px 14px; text-align: left; border-bottom: 1px solid var(--line); vertical-align: top; }
+.compare-table thead th { background: var(--surface-2); }
+.compare-table tbody th { color: var(--muted); font-weight: 600; white-space: nowrap; }
+.compare-questions ol { display: grid; gap: 10px; padding-left: 20px; list-style: decimal; }
+.compare-questions p { margin-top: 16px; }
+.compare-questions code { background: var(--surface-2); padding: 1px 6px; border-radius: 4px; }
+@media (max-width: 767px) { .compare-table { display: block; overflow-x: auto; } }
+
+.compare-page { min-height: 100dvh; display: grid; grid-template-rows: auto 1fr; background: #E9E8E3; }
+.compare-toolbar { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; padding: 10px var(--gutter); background: var(--surface); border-bottom: 1px solid var(--line); font-size: 14px; }
+.compare-toolbar label { display: inline-flex; gap: 8px; align-items: center; font-weight: 600; }
+.compare-toolbar select { min-height: 36px; border: 1.5px solid var(--line); border-radius: 8px; padding: 0 10px; background: var(--surface); }
+.compare-back { font-weight: 600; }
+.compare-seg { display: inline-flex; border: 1.5px solid var(--line); border-radius: 8px; overflow: hidden; }
+.compare-seg button { min-height: 36px; padding: 0 12px; border: 0; background: var(--surface); font-weight: 600; }
+.compare-seg button + button { border-left: 1.5px solid var(--line); }
+.compare-seg button.is-on { background: var(--ink); color: #fff; }
+.compare-frames { display: flex; gap: 24px; padding: 24px var(--gutter); overflow-x: auto; align-items: start; justify-content: safe center; }
+.compare-frame { display: grid; gap: 8px; flex: none; }
+.compare-frame figcaption { font-size: 13px; }
+.compare-frame figcaption a { color: var(--interactive-blue); margin-left: 6px; }
+.compare-frame-viewport { overflow: hidden; border-radius: 14px; box-shadow: var(--shadow-2); background: #fff; border: 1px solid var(--line); }
+.compare-frame-viewport iframe { border: 0; transform-origin: 0 0; display: block; }

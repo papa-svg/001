@@ -1,0 +1,57 @@
+/* =====================================================================
+   B. 컬렉터 아카이브 — 일정한 그리드, 정보 우선순위, 표 보기, 거의 정적
+   ===================================================================== */
+[data-concept="b"] {
+  --paper: #F3F3F0;
+  --display-weight: 700;
+  --display-tracking: -0.02em;
+  --display-leading: 1.12;
+  --radius-s: 4px;
+  --radius-m: 6px;
+  --radius-l: 8px;
+  --tile-gap: 16px;
+  --section-gap: 56px;
+  --dur: 80ms;
+  --shadow-1: none;
+  --shadow-2: 0 2px 8px rgba(32,33,36,.12);
+  --body-size: 14.5px;
+}
+[data-concept="b"] .site-header { background: var(--surface); }
+[data-concept="b"] .site-header-bar { min-height: 56px; }
+[data-concept="b"] .wordmark { font-size: 20px; letter-spacing: -0.04em; }
+[data-concept="b"] .searchbox { border-radius: var(--radius-m); }
+[data-concept="b"] .searchbox-submit, [data-concept="b"] .chip, [data-concept="b"] .tab, [data-concept="b"] .save-btn { border-radius: var(--radius-m); }
+@media (min-width: 900px) { [data-concept="b"] .site-header-search { max-width: 560px; } }
+
+.hero-b { display: grid; gap: 20px; padding: 36px var(--gutter) 28px; border-bottom: 1px solid var(--line); background: var(--surface); position: relative; max-width: none !important; }
+.hero-b > * { max-width: var(--max-w); margin-left: auto; margin-right: auto; width: 100%; }
+.hero-b-text { display: grid; gap: 8px; }
+.hero-b .hero-title { font-size: clamp(24px, 2.8vw, 36px); max-width: 30ch; }
+.hero-b .hero-lead { font-size: 15px; }
+.hero-b-search { display: grid; gap: 12px; }
+.hero-b-search .searchbox { max-width: 760px; }
+.hero-b-hints { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; font-size: 13px; }
+.hero-b-mark { position: absolute; right: var(--gutter); top: 28px; opacity: .9; }
+@media (max-width: 767px) { .hero-b-mark { display: none; } }
+
+[data-concept="b"] .section-title { font-size: 20px; }
+[data-concept="b"] .section-head { margin-bottom: 12px; align-items: baseline; }
+[data-concept="b"] .product-tile-media, [data-concept="b"] .card-tile-media { border-radius: var(--radius-m); box-shadow: none; border: 1px solid var(--line); }
+[data-concept="b"] .product-tile-media:hover, [data-concept="b"] .card-tile-media:hover { transform: none; border-color: var(--ink); }
+[data-concept="b"] .product-tile-name { font-size: 14px; }
+[data-concept="b"] .buy-panel { border-radius: var(--radius-l); }
+[data-concept="b"] .buy-panel-title { font-size: 20px; }
+[data-concept="b"] .product-facts-b { margin-top: 20px; }
+[data-concept="b"] .product-desc-b { margin-top: 32px; max-width: 70ch; }
+[data-concept="b"] .set-title { font-size: clamp(26px, 3.4vw, 40px); }
+[data-concept="b"] .set-header { align-items: start; }
+[data-concept="b"] .set-header-side-b { display: grid; gap: 12px; padding: 18px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-l); font-size: 14px; }
+[data-concept="b"] .set-subnav.is-sticky { background: var(--surface); }
+[data-concept="b"] .empty-state { border-style: solid; }
+[data-concept="b"] .compact-list .product-tile { display: grid; grid-template-columns: 72px 1fr; gap: 12px; align-items: center; padding: 10px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-m); }
+[data-concept="b"] .compact-list .product-tile-media { aspect-ratio: 1; }
+[data-concept="b"] .compact-list .product-tile-save { display: none; }
+[data-concept="b"] .story-list li a { padding: 10px 0; }
+[data-concept="b"] .facts, [data-concept="b"] .buy-panel-facts { font-size: 13.5px; }
+[data-concept="b"] .badge { border-radius: 3px; }
+[data-concept="b"] .kicker, [data-concept="b"] .section-kicker { text-transform: none; letter-spacing: 0; }

@@ -1,0 +1,63 @@
+/* =====================================================================
+   A. 취향 편집숍 — 여백과 밀도의 리듬, 비대칭 편집, 큐레이터 같은 오들리
+   ===================================================================== */
+[data-concept="a"] {
+  --display-weight: 800;
+  --display-tracking: -0.035em;
+  --display-leading: 1.02;
+  --radius-m: 12px;
+  --radius-l: 20px;
+  --tile-gap: 28px;
+  --section-gap: 96px;
+  --dur: 220ms;
+}
+[data-concept="a"] .site-header { background: color-mix(in srgb, var(--paper) 88%, transparent); }
+[data-concept="a"] .wordmark { font-size: 24px; }
+
+/* 히어로: 비대칭 두 칸. 오른쪽 프레임이 살짝 어긋난다('살짝 어긋난 하나'). */
+.hero-a { display: grid; gap: 40px; padding-top: 48px; padding-bottom: 32px; align-items: center; }
+@media (min-width: 900px) { .hero-a { grid-template-columns: 1.15fr .85fr; padding-top: 72px; padding-bottom: 48px; } }
+.hero-a-text { display: grid; gap: 22px; }
+.hero-a .hero-title { max-width: 12ch; }
+.hero-a-frame { position: relative; display: grid; grid-template-columns: 1fr 1.1fr; gap: 16px; align-items: end; padding: 28px 28px 24px; background: var(--surface); border-radius: var(--radius-l); box-shadow: var(--shadow-1); transform: rotate(-1.5deg); text-decoration: none !important; transition: transform var(--dur) var(--ease); }
+.hero-a-frame:hover { transform: rotate(-0.5deg) translateY(-2px); }
+.hero-a-card { width: min(100%, 240px); justify-self: end; border-radius: 10px; box-shadow: var(--shadow-2); transform: rotate(2deg); grid-column: 2; grid-row: 1 / span 2; }
+.hero-a-mark { grid-column: 1; grid-row: 1; align-self: end; justify-self: start; margin-left: -12px; }
+.hero-a-caption { grid-column: 1; grid-row: 2; font-size: 13px; line-height: 1.45; display: grid; gap: 4px; text-align: left; }
+@media (max-width: 599px) { .hero-a-frame { transform: none; padding: 20px; } .hero-a-card { width: min(100%, 180px); } }
+
+.quick-a { display: flex; gap: 6px 24px; flex-wrap: wrap; padding-top: 12px; padding-bottom: 12px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.quick-a a { min-height: var(--tap); display: inline-flex; align-items: center; font-weight: 700; font-size: 17px; letter-spacing: -0.01em; }
+.quick-a a::after { content: '→'; margin-left: 6px; opacity: 0; transform: translateX(-4px); transition: all var(--dur) var(--ease); }
+.quick-a a:hover::after { opacity: 1; transform: none; }
+
+/* 큐레이션: 1 큰 + 2 작은, 비대칭 */
+.curation-grid-a { display: grid; gap: 24px; }
+@media (min-width: 900px) { .curation-grid-a { grid-template-columns: 1.4fr 1fr; grid-template-rows: auto auto; } .curation-grid-a .is-big { grid-row: span 2; } }
+.curation-item { display: grid; gap: 18px; background: var(--surface); border-radius: var(--radius-l); padding: 22px; text-decoration: none !important; transition: transform var(--dur) var(--ease), box-shadow var(--dur) var(--ease); }
+.curation-item:hover { transform: translateY(-3px); box-shadow: var(--shadow-1); }
+.curation-item.is-big { padding: 32px; }
+@media (min-width: 600px) { .curation-item:not(.is-big) { grid-template-columns: 96px 1fr; align-items: center; } }
+.curation-media { display: flex; gap: 10px; justify-content: center; align-items: center; }
+.curation-media svg { width: 84px; border-radius: 6px; box-shadow: var(--shadow-1); }
+.curation-item.is-big .curation-media svg { width: min(30%, 170px); }
+.curation-item.is-big .curation-media svg:nth-child(2) { transform: translateY(-14px) rotate(2deg); }
+.curation-item.is-big .curation-media svg:nth-child(3) { transform: rotate(-3deg); }
+.curation-media > svg[viewBox="0 0 400 400"] { width: 100%; max-width: 160px; border-radius: 10px; }
+.curation-body { display: grid; gap: 8px; }
+.curation-body h3 { font-size: 20px; letter-spacing: -0.02em; line-height: 1.25; }
+.curation-item.is-big .curation-body h3 { font-size: 28px; }
+.curation-reason { color: var(--muted); font-size: 14.5px; }
+.curation-more { font-weight: 600; color: var(--interactive-blue); font-size: 14px; margin-top: 4px; }
+
+[data-concept="a"] .product-tile-media:hover { transform: translateY(-3px); }
+[data-concept="a"] .card-tile-media:hover { transform: translateY(-3px) rotate(-.6deg); box-shadow: var(--shadow-2); }
+[data-concept="a"] .section-title { max-width: 22ch; }
+[data-concept="a"] .story-cards-a li:first-child .story-card { background: var(--ink); color: #fff; border-color: var(--ink); }
+[data-concept="a"] .story-cards-a li:first-child .story-card p, [data-concept="a"] .story-cards-a li:first-child .kicker { color: rgba(255,255,255,.72); }
+[data-concept="a"] .set-hero-frame-a { padding: 28px 24px 24px; background: var(--surface); border-radius: var(--radius-l); transform: rotate(1.2deg); box-shadow: var(--shadow-1); }
+[data-concept="a"] .set-hero-frame-a .set-hero-card { width: min(70%, 230px); transform: rotate(-2deg); }
+[data-concept="a"] .set-hero-frame-a .set-hero-mark { left: -16px; right: auto; bottom: 8px; }
+[data-concept="a"] .set-hero-frame-a .set-hero-caption { display: grid; gap: 4px; margin-top: 16px; font-size: 13px; line-height: 1.45; }
+[data-concept="a"] .buy-panel { box-shadow: var(--shadow-1); border-color: transparent; }
+[data-concept="a"] .set-title { font-size: clamp(34px, 5vw, 64px); }
