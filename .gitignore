@@ -4,3 +4,17 @@ dist-static
 *.local
 .DS_Store
 .playwright-cache
+
+
+# secrets / local env
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+
+
+
+
+
